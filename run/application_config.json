@@ -99,12 +99,13 @@
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-schedule\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-multipart\\config\\locales",
-        "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-logrotator\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\locales",
+        "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-mock\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\locales",
+        "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-mock\\lib\\tmp\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\config\\locales"
       ],
       "queryField": "locale",
@@ -141,13 +142,6 @@
         "cron": "0 30 4 * * *"
       }
     },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": false,
-      "reloadOnDebug": true,
-      "overrideDefault": false
-    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -170,7 +164,7 @@
       "root": [
         "D:\\Users\\Administrator\\My Document\\test-egg\\app\\view"
       ],
-      "cache": false,
+      "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "nunjucks",
       "mapping": {
@@ -182,9 +176,9 @@
       "throwOnUndefined": false,
       "trimBlocks": false,
       "lstripBlocks": false,
-      "cache": false
+      "cache": true
     },
-    "env": "local",
+    "env": "unittest",
     "name": "test-egg",
     "keys": "<String len: 10>",
     "proxy": false,
@@ -197,7 +191,9 @@
       "description": "测试鸡蛋",
       "main": "index.js",
       "scripts": {
-        "dev": "egg-bin dev"
+        "dev": "egg-bin dev",
+        "test": "egg-bin test",
+        "cov": "egg-bin cov"
       },
       "repository": {
         "type": "git",
@@ -214,12 +210,13 @@
       },
       "homepage": "https://github.com/qidaneix/test-egg#readme",
       "dependencies": {
-        "dayjs": "^1.7.7",
         "egg": "^2.12.0",
-        "egg-view-nunjucks": "^2.2.0"
+        "egg-view-nunjucks": "^2.2.0",
+        "moment": "^2.22.2"
       },
       "devDependencies": {
-        "egg-bin": "^4.9.0"
+        "egg-bin": "^4.9.0",
+        "egg-mock": "^3.20.1"
       }
     },
     "baseDir": "D:\\Users\\Administrator\\My Document\\test-egg",
@@ -257,19 +254,17 @@
     "logger": {
       "dir": "D:\\Users\\Administrator\\My Document\\test-egg\\logs\\test-egg",
       "encoding": "utf8",
-      "env": "local",
+      "env": "unittest",
       "level": "INFO",
-      "consoleLevel": "INFO",
+      "consoleLevel": "WARN",
       "disableConsoleAfterReady": false,
       "outputJSON": false,
-      "buffer": true,
+      "buffer": false,
       "appLogName": "test-egg-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {
-        "consoleLevel": "WARN"
-      },
+      "coreLogger": {},
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -305,9 +300,9 @@
       "bodyParser",
       "overrideMethod",
       "session",
+      "clusterAppMock",
       "securities",
-      "i18n",
-      "eggLoaderTrace"
+      "i18n"
     ],
     "workerStartTimeout": 600000,
     "cluster": {
@@ -326,9 +321,18 @@
       "pageSize": 5,
       "serverUrl": "https://hacker-news.firebaseio.com/v0"
     },
+    "middleware": [
+      "robot"
+    ],
+    "robot": {
+      "ua": [
+        {},
+        {}
+      ]
+    },
     "coreMiddlewares": "~config~coreMiddleware",
-    "appMiddlewares": [],
-    "appMiddleware": "~config~appMiddlewares",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware",
     "multipartParseOptions": {
       "autoFields": false,
       "defCharset": "utf8",
@@ -439,21 +443,6 @@
       "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-multipart",
       "version": "2.2.1"
     },
-    "development": {
-      "enable": true,
-      "package": "egg-development",
-      "name": "development",
-      "dependencies": [
-        "watcher"
-      ],
-      "optionalDependencies": [],
-      "env": [
-        "local"
-      ],
-      "from": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development",
-      "version": "2.4.1"
-    },
     "logrotator": {
       "enable": true,
       "package": "egg-logrotator",
@@ -502,6 +491,15 @@
       "from": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\plugin.js",
       "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks",
       "version": "2.2.0"
+    },
+    "egg-mock": {
+      "enable": true,
+      "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-mock",
+      "name": "egg-mock",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "version": "3.20.1"
     }
   }
 }

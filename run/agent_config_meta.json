@@ -6,12 +6,16 @@
       ".tpl": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js"
     },
     "root": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\config.local.js",
+    "cache": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\config.default.js",
     "defaultExtension": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\config.default.js"
   },
   "news": {
     "pageSize": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js",
     "serverUrl": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js"
+  },
+  "middleware": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js",
+  "robot": {
+    "ua": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js"
   },
   "session": {
     "maxAge": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-session\\config\\config.default.js",
@@ -38,7 +42,7 @@
       "value": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-security\\config\\config.local.js",
+      "enable": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-security\\config\\config.default.js",
       "maxAge": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-security\\config\\config.default.js",
       "includeSubdomains": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-security\\config\\config.default.js"
     },
@@ -92,7 +96,7 @@
     "cookieMaxAge": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.local.js",
+    "type": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.unittest.js",
     "eventSources": {
       "default": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.default.js",
       "development": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.default.js"
@@ -120,13 +124,6 @@
       "cron": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
-  "development": {
-    "watchDirs": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\config.default.js",
-    "ignoreDirs": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\config.default.js",
-    "fastReady": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\config.default.js",
-    "reloadOnDebug": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideDefault": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\config.default.js"
-  },
   "logrotator": {
     "filesRotateByHour": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-logrotator\\config\\config.default.js",
     "hourDelimiter": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-logrotator\\config\\config.default.js",
@@ -149,7 +146,7 @@
     "throwOnUndefined": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "trimBlocks": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "lstripBlocks": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "cache": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
+    "cache": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js"
   },
   "env": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
   "name": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
@@ -163,7 +160,9 @@
     "description": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "main": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "scripts": {
-      "dev": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
+      "dev": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+      "test": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+      "cov": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
     },
     "repository": {
       "type": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
@@ -177,12 +176,13 @@
     },
     "homepage": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
-      "dayjs": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
       "egg": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-      "egg-view-nunjucks": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
+      "egg-view-nunjucks": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+      "moment": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "egg-bin": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
+      "egg-bin": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "baseDir": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
@@ -221,17 +221,15 @@
     "encoding": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "env": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "level": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.unittest.js",
     "disableConsoleAfterReady": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "outputJSON": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.unittest.js",
     "appLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "coreLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "agentLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "errorLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-    "coreLogger": {
-      "consoleLevel": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.local.js"
-    },
+    "coreLogger": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "allowDebugAtProd": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {
