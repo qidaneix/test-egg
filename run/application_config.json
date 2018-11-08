@@ -99,6 +99,7 @@
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-schedule\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-multipart\\config\\locales",
+        "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-logrotator\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\locales",
@@ -112,7 +113,7 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "default",
+      "type": "development",
       "eventSources": {
         "default": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\lib\\event-sources\\default",
         "development": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\lib\\event-sources\\development"
@@ -121,7 +122,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "C:\\Users\\Administrator\\logs\\test-egg\\egg-schedule.log"
+        "file": "D:\\Users\\Administrator\\My Document\\test-egg\\logs\\test-egg\\egg-schedule.log"
       }
     },
     "multipart": {
@@ -140,6 +141,13 @@
         "cron": "0 30 4 * * *"
       }
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false
+    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -154,16 +162,15 @@
       "dir": "D:\\Users\\Administrator\\My Document\\test-egg\\app\\public",
       "dynamic": true,
       "preload": false,
-      "buffer": true,
+      "buffer": false,
       "maxFiles": 1000,
-      "maxAge": 31536000,
       "files": "<LRU>"
     },
     "view": {
       "root": [
         "D:\\Users\\Administrator\\My Document\\test-egg\\app\\view"
       ],
-      "cache": true,
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "nunjucks",
       "mapping": {
@@ -175,9 +182,9 @@
       "throwOnUndefined": false,
       "trimBlocks": false,
       "lstripBlocks": false,
-      "cache": true
+      "cache": false
     },
-    "env": "prod",
+    "env": "local",
     "name": "test-egg",
     "keys": "<String len: 10>",
     "proxy": false,
@@ -192,7 +199,9 @@
       "scripts": {
         "dev": "egg-bin dev",
         "test": "egg-bin test",
-        "cov": "egg-bin cov"
+        "cov": "egg-bin cov",
+        "start": "egg-scripts start --port=7001 --daemon",
+        "stop": "egg-scripts stop"
       },
       "repository": {
         "type": "git",
@@ -209,7 +218,9 @@
       },
       "homepage": "https://github.com/qidaneix/test-egg#readme",
       "dependencies": {
+        "axios": "^0.18.0",
         "egg": "^2.12.0",
+        "egg-scripts": "^2.10.0",
         "egg-view-nunjucks": "^2.2.0",
         "koa-is-json": "^1.0.0",
         "moment": "^2.22.2",
@@ -254,19 +265,21 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "C:\\Users\\Administrator\\logs\\test-egg",
+      "dir": "D:\\Users\\Administrator\\My Document\\test-egg\\logs\\test-egg",
       "encoding": "utf8",
-      "env": "prod",
+      "env": "local",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": true,
+      "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "test-egg-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {},
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -303,7 +316,8 @@
       "overrideMethod",
       "session",
       "securities",
-      "i18n"
+      "i18n",
+      "eggLoaderTrace"
     ],
     "workerStartTimeout": 600000,
     "cluster": {
@@ -328,7 +342,6 @@
     ],
     "robot": {
       "ua": [
-        {},
         {}
       ]
     },
@@ -445,6 +458,21 @@
       "from": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-multipart",
       "version": "2.2.1"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-development",
+      "version": "2.4.1"
     },
     "logrotator": {
       "enable": true,
