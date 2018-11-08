@@ -17,6 +17,7 @@
   "robot": {
     "ua": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js"
   },
+  "gzip": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\config.default.js",
   "session": {
     "maxAge": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-session\\config\\config.default.js",
     "key": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-session\\config\\config.default.js",
@@ -96,7 +97,7 @@
     "cookieMaxAge": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.unittest.js",
+    "type": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.default.js",
     "eventSources": {
       "default": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.default.js",
       "development": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\config\\config.default.js"
@@ -138,8 +139,9 @@
     "dir": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.default.js",
     "dynamic": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.default.js",
     "preload": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.default.js"
+    "buffer": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.prod.js",
+    "maxFiles": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.default.js",
+    "maxAge": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\config.prod.js"
   },
   "nunjucks": {
     "autoescape": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
@@ -178,9 +180,12 @@
     "dependencies": {
       "egg": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
       "egg-view-nunjucks": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-      "moment": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
+      "koa-is-json": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+      "moment": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
+      "zlib": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
+      "cross-env": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
       "egg-bin": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
       "egg-mock": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js"
     }
@@ -221,10 +226,10 @@
     "encoding": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "env": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "level": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.unittest.js",
+    "consoleLevel": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "disableConsoleAfterReady": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "outputJSON": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.unittest.js",
+    "buffer": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "appLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "coreLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",
     "agentLogName": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\config.default.js",

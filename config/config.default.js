@@ -13,12 +13,14 @@ exports.news = {
 };
 
 exports.middleware = [
-  'robot'
+  'robot',
+  'gzip',
 ];
 
 exports.robot = {
   ua: [
-    /curl/i,
     /Baiduspider/i,
   ]
 };
+
+exports.gzip = {};

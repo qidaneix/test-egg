@@ -103,9 +103,7 @@
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-static\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks\\config\\locales",
-        "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-mock\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg\\config\\locales",
-        "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-mock\\lib\\tmp\\config\\locales",
         "D:\\Users\\Administrator\\My Document\\test-egg\\config\\locales"
       ],
       "queryField": "locale",
@@ -114,7 +112,7 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "development",
+      "type": "default",
       "eventSources": {
         "default": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\lib\\event-sources\\default",
         "development": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-watcher\\lib\\event-sources\\development"
@@ -123,7 +121,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "D:\\Users\\Administrator\\My Document\\test-egg\\logs\\test-egg\\egg-schedule.log"
+        "file": "C:\\Users\\Administrator\\logs\\test-egg\\egg-schedule.log"
       }
     },
     "multipart": {
@@ -156,8 +154,9 @@
       "dir": "D:\\Users\\Administrator\\My Document\\test-egg\\app\\public",
       "dynamic": true,
       "preload": false,
-      "buffer": false,
+      "buffer": true,
       "maxFiles": 1000,
+      "maxAge": 31536000,
       "files": "<LRU>"
     },
     "view": {
@@ -178,7 +177,7 @@
       "lstripBlocks": false,
       "cache": true
     },
-    "env": "unittest",
+    "env": "prod",
     "name": "test-egg",
     "keys": "<String len: 10>",
     "proxy": false,
@@ -212,9 +211,12 @@
       "dependencies": {
         "egg": "^2.12.0",
         "egg-view-nunjucks": "^2.2.0",
-        "moment": "^2.22.2"
+        "koa-is-json": "^1.0.0",
+        "moment": "^2.22.2",
+        "zlib": "^1.0.5"
       },
       "devDependencies": {
+        "cross-env": "^5.2.0",
         "egg-bin": "^4.9.0",
         "egg-mock": "^3.20.1"
       }
@@ -252,14 +254,14 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "D:\\Users\\Administrator\\My Document\\test-egg\\logs\\test-egg",
+      "dir": "C:\\Users\\Administrator\\logs\\test-egg",
       "encoding": "utf8",
-      "env": "unittest",
+      "env": "prod",
       "level": "INFO",
-      "consoleLevel": "WARN",
-      "disableConsoleAfterReady": false,
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": true,
       "outputJSON": false,
-      "buffer": false,
+      "buffer": true,
       "appLogName": "test-egg-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
@@ -300,7 +302,6 @@
       "bodyParser",
       "overrideMethod",
       "session",
-      "clusterAppMock",
       "securities",
       "i18n"
     ],
@@ -322,7 +323,8 @@
       "serverUrl": "https://hacker-news.firebaseio.com/v0"
     },
     "middleware": [
-      "robot"
+      "robot",
+      "gzip"
     ],
     "robot": {
       "ua": [
@@ -330,6 +332,7 @@
         {}
       ]
     },
+    "gzip": {},
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": "~config~middleware",
     "appMiddleware": "~config~middleware",
@@ -491,15 +494,6 @@
       "from": "D:\\Users\\Administrator\\My Document\\test-egg\\config\\plugin.js",
       "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-view-nunjucks",
       "version": "2.2.0"
-    },
-    "egg-mock": {
-      "enable": true,
-      "path": "D:\\Users\\Administrator\\My Document\\test-egg\\node_modules\\egg-mock",
-      "name": "egg-mock",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "version": "3.20.1"
     }
   }
 }
