@@ -13,6 +13,7 @@
         if (response.code === 200) {
           var res = response.result;
           if(res.endCount){
+            $('#time').html("距活动结束：");
             timeFormat(res.endCount);
           } else {
             $('#time').html("距活动开始：");
