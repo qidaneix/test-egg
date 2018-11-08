@@ -43,7 +43,7 @@
         count -= 3;
       }
 
-      str.length % 3 && arr.unshift(0, str.length % 3);
+      str.length % 3 && arr.unshift(str.slice(0, str.length % 3));
       return arr.toString();
     }
     return 0;
