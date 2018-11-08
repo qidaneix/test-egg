@@ -27,7 +27,7 @@
         if (dataTimer) clearTimeout(dataTimer);
         dataTimer = setTimeout(() => {
           getData();
-        }, 5000)
+        }, 15000)
       },
     });
   };
@@ -44,7 +44,7 @@
 
       str.length % 3 && arr.unshift(0, str.length % 3);
       return arr.toString();
-    } 
+    }
     return 0;
   }
 
